@@ -55,21 +55,29 @@ public class ImageController: ControllerBase
         var usernameFromCookie = Request.Cookies["username"];
         var image = await _service.GetImage(id);
         if (image == null)
-            throw new Exception("Image not found");
+            return NotFound("Image not found");
+    
         if (usernameFromCookie != image.UserName)
             return Unauthorized();
-        
+
         if (System.IO.File.Exists(image.FilePath))
         {
             System.IO.File.Delete(image.FilePath);
         }
-        else
+
+        // Eğer video ise, poster'ı da sil
+        if (image.FileType == "video" && !string.IsNullOrEmpty(image.posterPath))
         {
-            throw new Exception("Image not found");
+            if (System.IO.File.Exists(image.posterPath))
+            {
+                System.IO.File.Delete(image.posterPath);
+            }
         }
+
         await _service.DeleteImage(id);
         return Ok();
     }
+
 
     [HttpGet("user/{username}")]
     public async Task<IActionResult> UploadImage(string username)

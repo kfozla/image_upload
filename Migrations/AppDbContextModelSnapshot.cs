@@ -41,8 +41,15 @@ namespace api_image_upload.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("FileType")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("UserName")
                         .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("posterPath")
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");

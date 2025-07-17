@@ -109,3 +109,4 @@
 /Users/yusuf/RiderProjects/api-image-upload/api-image-upload/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/yusuf/RiderProjects/api-image-upload/api-image-upload/bin/Debug/net8.0/MySqlConnector.dll
 /Users/yusuf/RiderProjects/api-image-upload/api-image-upload/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/yusuf/RiderProjects/api-image-upload/api-image-upload/obj/Debug/net8.0/api-image-upload.sourcelink.json
