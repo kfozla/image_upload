@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "f0Hd8Mqv0Y06Wc6VjGn+h3zDIDDj4QZuwJxl4/g75IM=",
+  "Source": "api-image-upload",
+  "BasePath": "_content/api-image-upload",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
