@@ -38,11 +38,11 @@ builder.Services.AddScoped<IImageService, ImageService>();
 
 builder.Services.Configure<FormOptions>(options =>
 {
-    options.MultipartBodyLengthLimit = 104857600; // 100 MB örnek
+    options.MultipartBodyLengthLimit = 1073741824; // 1 GB örnek
 });
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.Limits.MaxRequestBodySize = 104857600; // 100 MB
+    options.Limits.MaxRequestBodySize = 1073741824; // 1 GB
 });
 
 

@@ -19,7 +19,7 @@ public class ImageController: ControllerBase
         _context = context;
         _service = service;
     }
-    [RequestSizeLimit(104857600)]
+    [RequestSizeLimit(1073741824)]
     [HttpPost("upload")]
     public async Task<IActionResult> UploadImage([FromForm] string username,[FromForm] List<IFormFile> images)
     {
@@ -77,7 +77,7 @@ public class ImageController: ControllerBase
         await _service.DeleteImage(id);
         return Ok();
     }
-
+    
 
     [HttpGet("user/{username}")]
     public async Task<IActionResult> UploadImage(string username)
